@@ -74,14 +74,14 @@ The system supports Role-Based Access Control (RBAC):
 
 ##  Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1.  Clone the Repository
 
 ``` bash
 git clone <https://github.com/DCIT-321-PROJECT-G-7/sales-manager-backend.git>
 cd sales-manager-backend
 ```
 
-### 2️⃣ Create Virtual Environment
+### 2.  Create Virtual Environment
 
 ``` bash
 python -m venv venv
@@ -222,6 +222,6 @@ http://127.0.0.1:8000/
 
 
 
-## 📌 License
+## License
 
 MIT
