@@ -171,6 +171,7 @@ http://127.0.0.1:8000/
 -   GET /api/reports/daily/
 -   GET /api/reports/weekly/
 -   GET /api/reports/monthly/
+-   GET /api/reports/annual/
 -   GET /api/reports/export/
 
 ------------------------------------------------------------------------
