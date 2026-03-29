@@ -171,34 +171,92 @@ http://127.0.0.1:8000/
 -   GET /api/reports/daily/
 -   GET /api/reports/weekly/
 -   GET /api/reports/monthly/
+-   GET /api/reports/annual/
 -   GET /api/reports/export/
 
 ------------------------------------------------------------------------
 
 ##  Project Structure
-
-    sales-manager-backend/
-    │
-    ├── sales_app/
-    │   ├── models.py
-    │   ├── views.py
-    │   ├── serializers.py
-    │   ├── urls.py
-    │   └── permissions.py
-    │
-    ├── users/
-    │   ├── models.py
-    │   ├── views.py
-    │   └── urls.py
-    │
-    ├── config/
-    │   ├── settings.py
-    │   └── urls.py
-    │
-    ├── manage.py
-    ├── requirements.txt
-    └── README.md
-
+```
+sales-manager-backend/
+│
+├── users/ admin, salesperson, manager, role                  # Users & authentication
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── permissions.py
+│   └── admin.py
+│   
+│
+├── customers/            # Customer management
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── admin.py
+│
+├── products/              # Product catalog
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └──admin.py
+│
+├── sales/                  # Sales + SaleItems (core logic)
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── services.py            # business logic (important)
+│   └── admin.py
+│   
+│
+├── inventory/                 # Stock tracking
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── services.py
+│   └── admin.py
+│   
+│
+├── payments/                  # Payment handling
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── services.py
+│   └── admin.py
+│   
+│
+├── notifications/             # Alerts system
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── services.py
+│   └── admin.py
+│   
+│
+├── reports/                   # Analytics
+│   ├── views.py
+│   ├── urls.py
+│   └── services.py
+│   
+│
+├── config/                    # Project configuration
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py                # root router
+│   ├── asgi.py
+│   └── wsgi.py
+│
+│
+├── manage.py
+├── requirements.txt
+└── README.md
+```
 ------------------------------------------------------------------------
 
 ##  Security Considerations
